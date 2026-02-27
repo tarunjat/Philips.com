@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarun LED Store</title>
+
+<style>
+body{font-family:Arial;margin:0;background:#f2f2f2}
+.navbar{background:#131921;color:white;padding:15px;display:flex;justify-content:space-between}
+.logo{color:#ff9900;font-size:20px;font-weight:bold}
+.container{padding:20px}
+.product-box{background:white;padding:15px;border-radius:8px}
+.slider img{width:100%;border-radius:8px}
+.price{color:#B12704;font-size:24px;font-weight:bold}
+.old-price{text-decoration:line-through;color:gray}
+.rating{background:#e7f3e7;padding:5px 10px;display:inline-block;border-radius:20px;margin:10px 0}
+button{padding:12px;border:none;border-radius:6px;font-size:16px;margin-top:10px;width:100%;cursor:pointer}
+.emi{background:#f0f0f0}
+.buy{background:#ffd814}
+@media(min-width:768px){
+  .product-box{max-width:700px;margin:auto}
+}
+</style>
+
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">Tarun LED Store</div>
+  <div>Cart 🛒</div>
+</div>
+
+<div class="container">
+<div class="product-box">
+
+<div class="slider">
+  <img id="productImage" src="IMAGE1.jpg">
+</div>
+
+<h2>PHILIPS 32 Inch (80cm) HD Ready Smart Google TV 2025</h2>
+<p>Model: 32PFT6130/94 | Dolby Audio | HDR10 | 60Hz | 8GB Storage | Energy Saving</p>
+
+<div class="rating">⭐ 4.1 | 5.9K+</div>
+
+<p>
+<span style="color:green;font-weight:bold;">48% Off</span><br>
+<span class="old-price">₹22,999</span>
+<span class="price"> ₹11,999</span>
+</p>
+
+<button class="emi">Buy with EMI From ₹4,000/m</button>
+<button class="buy">Buy Now at ₹11,999</button>
+
+</div>
+</div>
+
+<script>
+const images = [
+  "IMAGE1.jpg",
+  "IMAGE2.jpg",
+  "IMAGE3.jpg",
+  "IMAGE4.jpg",
+  "IMAGE5.jpg"
+];
+
+let index = 0;
+
+setInterval(()=>{
+  index = (index+1) % images.length;
+  document.getElementById("productImage").src = images[index];
+},3000);
+</script>
+
+</body>
+</html>
